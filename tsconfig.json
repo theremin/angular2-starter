@@ -1,0 +1,24 @@
+{
+    "compilerOptions": {
+        "module": "commonjs",
+        "target": "es5",
+        "noImplicitAny": false,
+        "outDir": "dist",
+        "sourceMap": true,
+        "emitDecoratorMetadata": true,
+        "experimentalDecorators": true,
+        "noLib": false,
+        "listFiles": true
+    },
+    "exclude": [
+        "node_modules"
+    ],
+    "files": [
+        "./src/typings/_custom.d.ts",
+        "./src/app/ts/demo_form.ts",
+        "./src/app/app.ts",
+        "./src/app/bootstrap.ts"
+
+
+    ]
+}

@@ -1,0 +1,39 @@
+{
+  "name": "test-type",
+  "version": "1.0.0",
+  "description": "",
+  "main": "webpack.config.js",
+  "dependencies": {
+    "@reactivex/rxjs": "^5.0.0-alpha.6",
+    "angular2": "^2.0.0-alpha.44",
+    "jquery": "^2.1.4",
+    "reflect-metadata": "^0.1.2"
+  },
+  "devDependencies": {
+    "bootstrap-sass": "^3.3.5",
+    "bootstrap-sass-loader": "^1.0.9",
+    "css-loader": "^0.20.1",
+    "extract-text-webpack-plugin": "^0.8.2",
+    "file-loader": "^0.8.4",
+    "node-sass": "^3.3.3",
+    "sass-loader": "^3.0.0",
+    "style-loader": "^0.12.4",
+    "ts-loader": "^0.5.6",
+    "tsd": "^0.6.5",
+    "typescript": "^1.6.2",
+    "url-loader": "^0.5.6",
+    "webpack": "^1.12.2",
+    "webpack-dev-server": "^1.12.1"
+  },
+  "scripts": {
+    "build": "npm run webpack --colors --display-error-details --display-cached",
+    "webpack": "webpack",
+    "watch": "webpack --watch",
+    "server": "webpack-dev-server --inline --colors --display-error-details --port 3000",
+    "remove-tsd-loader-typings": "rimraf node_modules/typescript-simple-loader/typescript-simple-loader.d.ts",
+    "tsd-update": "npm run remove-tsd-loader-typings && tsd reinstall --overwrite",
+    "postinstall": "npm run tsd-update && tsd install && tsd link"
+  },
+  "author": "",
+  "license": "ISC"
+}
